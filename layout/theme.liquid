@@ -20,11 +20,9 @@
 
 
 
-        <link rel="stylesheet" href="assets/js/plugin/slick/slick.css" />
-
-        <link rel="stylesheet" href="assets/js/plugin/slick/slick-theme.css" />
-
-        <link rel="stylesheet" href="assets/css/main.css" />
+        {{ 'slick.css' | asset_url | stylesheet_tag }}
+        {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+        {{ 'main.css' | asset_url | stylesheet_tag }}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -45,14 +43,14 @@
     {% section 'footer' %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="./assets/js/plugin/slick/slick.min.js"></script>
+        {{ 'slick.min.js' | asset_url | script_tag }}
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
             integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-        <script src="./assets/js/main.js"></script>
         
+        {{ 'main.js' | asset_url | script_tag }}
     </body>
 </html>
