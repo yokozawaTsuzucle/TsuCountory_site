@@ -38,7 +38,298 @@
     {% section 'header' %}
 
 
-{{ content_for_layout }}
+            <div class="reservationBtn">
+            <a href="#">ご予約</a>
+        </div>
+        <main class="main">
+            <section class="about">
+                <h2 class="section__ttl about__ttl">ABOUT</h2>
+                <h3 class="section__subTtl about__subTtl">
+                    津カントリー倶楽部とは
+                </h3>
+                <ul class="slider-2">
+                    <li class="slider-2__item slider-2__item01">
+                        <h2 class="slider-2__ttl">伝統と格式への思い</h2>
+                        <h3 class="slider-2__subTtl">
+                            「一流」にこだわり続けた気品に<br
+                                class="br"
+                            />あふれたステージ
+                        </h3>
+                        <p class="slider-2__text">
+                            大切なゲストをお迎えする、気品あるクラブハウス。<br />
+                            メンバーであることの誇りを味わせてくれるのが、<br />
+                            まずゲストを招き入れてくれる重厚な木のゲート。<br />
+                            日頃の多忙な時間を忘れ、<br
+                                class="br"
+                            />ゆったり流れる「刻」を満喫していただくため、<br />
+                            時計の姿がほとんど見られないのも特徴です。
+                        </p>
+                        <a href="#" class="btn btn--wh">詳細はこちら</a>
+                        <a href="#" class="btn btn--vw">詳細はこちら</a>
+                        <img
+                            class="slider-2__bar"
+                            src="./assets/images/TOP/point.png"
+                            src="./assets/images/TOP/point.png"
+                            alt=""
+                        />
+                    </li>
+                    <li class="slider-2__item slider-2__item02">
+                        <h2 class="slider-2__ttl">
+                            次世代のゴルフ場としての<br />企業・団体の会員制度
+                        </h2>
+                        <h3 class="slider-2__subTtl">
+                            福利厚生施設として、150haの<br />ゴルフ場をお使いください
+                        </h3>
+                        <p class="slider-2__text">
+                            企業・団体に所属するメンバー、ご家族、友人、お取引先のかたに<br />弊施設をご利用いただける取り組みです。<br />
+                            広い駐車場、送迎バス、ご家族で自由にお楽しみいただける<br />エンジェルパーク、屋外トランポリン、ゴルフ上達のための「天空塾」、サテライトオフィスEZドーム宿泊施設「Katad&nbsp;Lodge&Villa」など充実した施設があります。
+                        </p>
+                        <a href="#" class="btn btn--wh">詳細はこちら</a>
+                        <a href="#" class="btn btn--vw">詳細はこちら</a>
+                        <img
+                            class="slider-2__bar"
+                            alt="{{ 'point2.png' | asset_img_url: '3000x'}}"
+                        />
+                    </li>
+                    <li class="slider-2__item slider-2__item03">
+                        <h2 class="slider-2__ttl">戦略的なゴルフコース</h2>
+                        <h3 class="slider-2__subTtl">
+                            海外のゴルフコースをモデルにした<br />三重県1の難易度を誇るコース
+                        </h3>
+                        <p class="slider-2__text">
+                            ジャンボ尾崎の別名でも知られるプロゴルファー尾崎将司氏は、<br />「日本のコースは簡単すぎる。<br />これからは、世界のレベルに匹敵するコースづくりが必要だ」といいます。<br />
+                            海外各地で印象に残ったコースや重要なコースなど、実経験から蓄積した豊富なデータを活かし、オリジナリティあるコース設計を実現しました。
+                        </p>
+                        <a href="#" class="btn btn--wh">詳細はこちら</a>
+                        <a href="#" class="btn btn--vw">詳細はこちら</a>
+                        <img
+                            class="slider-2__bar"
+                            src="{{ 'point.png' | asset_img_url: '3000x'}}"
+                            alt=""
+                        />
+                    </li>
+                    <li class="slider-2__item slider-2__item04">
+                        <h2 class="slider-2__ttl">地球にやさしいゴルフ場</h2>
+                        <h3 class="slider-2__subTtl">
+                            環境を浄化し人と自然が共存共栄できる<br />未来に寄与できる私たちの取り組み
+                        </h3>
+                        <p class="slider-2__text">
+                            EMと呼ばれる微生物を集めた堆肥や活性液を活用することで、土壌の質が良くなり、食物や農作物が元気に育つ環境づくりをしています。<br />
+                            4番ホールの池にEM活性液を入れたところ、半年後には臭いや淀みが消え、池の底が透け見えるほどになりました。今後も明るく豊かな地域社会の発展に貢献できるよう、EMをさまざまな分野に活用して、環境問題にも取り組んでいく計画です。
+                        </p>
+                        <a href="#" class="btn btn--wh">詳細はこちら</a>
+                        <a href="#" class="btn btn--vw">詳細はこちら</a>
+                        <img
+                            class="slider-2__bar"
+                            src="{{ 'point2.png' | asset_img_url: '3000x'}}"
+                            alt=""
+                        />
+                    </li>
+                    <li class="slider-2__item slider-2__item05">
+                        <h2 class="slider-2__ttl">社会貢献への取り組み</h2>
+                        <h3 class="slider-2__subTtl">
+                            障害者ゴルフ大会、チャリティコンペの<br />開催やジュニアの育成
+                        </h3>
+                        <p class="slider-2__text slider-2__text--mb">
+                            津カントリー倶楽部では、地域社会に貢献する障害者ゴルフ大会やジュニアの育成など、さまざまなイベントを企画・開催しています。
+                        </p>
+                        <p class="slider-2__text">
+                            毎年夏に開催される「Marine&nbsp;Cup海難遺児チャリティコンペ」と「三重・沖縄ファミリーゴルフ交流会」、毎年11月3日に開催される「ザ・チャレンジドゴルフトーナメント」は、当ゴルフ場の三大イベントでもあり、毎回多くの方にご参加をいただいている恒例行事でもあります。
+                        </p>
+                        <a href="#" class="btn btn--wh">詳細はこちら</a>
+                        <a href="#" class="btn btn--vw">詳細はこちら</a>
+                        <img
+                            class="slider-2__bar"
+                            src="./assets/images/TOP/point.png"
+                            alt=""
+                        />
+                    </li>
+                </ul>
+            </section>
+            <!-- media -->
+            <article class="media">
+                <figure class="media__img">
+                    <img
+                        src="{{ 'golf-originalCourse-pc.jpg' | asset_img_url: '3000x'}}"
+                        width="513"
+                        height="311"
+                        alt="戦略性に富むオリジナルコース"
+                        class="media__img--pc"
+                    />
+                    <img
+                        src="{{ 'golf-originalCourse-sp.jpg' | asset_img_url: '3000x'}}"
+                        width="513"
+                        height="311"
+                        alt="戦略性に富むオリジナルコース"
+                        class="media__img--sp"
+                    />
+                </figure>
+                <div
+                    class="media__body js-rellax"
+                    data-rellax-speed="3"
+                    data-rellax-percentage="0.5"
+                >
+                    <p class="media__num section__num">01.</p>
+                    <h3 class="media__ttl">
+                        広大な敷地内に設置された<br />
+                        戦略性に富むオリジナルコース
+                    </h3>
+                    <p class="media__text">
+                        7000ヤード越えのロングディスタンスのコースは、<br />
+                        ツーグリーンと比べてグリーンの面積が広くて<br />
+                        難しい場合が多い、ベントのワングリーン<br />
+                        身長よりも高いリベットバンカー、<br />
+                        レンガに囲まれた大きな池など、<br />
+                        戦略的で魅力的なコースがお待ちしています。
+                    </p>
+                    <a href="#" class="media__btn">詳細はこちら</a>
+                </div>
+            </article>
+            <article class="media media__reverse">
+                <figure class="media__img">
+                    <img
+                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
+                        width="513"
+                        height="311"
+                        alt="戦略性に富むオリジナルコース"
+                        class=""
+                    />
+                </figure>
+                <div
+                    class="media__body js-rellax"
+                    data-rellax-speed="3"
+                    data-rellax-percentage="0.5"
+                >
+                    <p class="media__num section__num">02.</p>
+                    <h3 class="media__ttl">
+                        ゴルフ場までの距離0m.<br />
+                        日本の伝統美を感じるロッジへの滞在
+                    </h3>
+                    <p class="media__text">
+                        18番ホールを望む最高のロケーションに<br />
+                        KATADA Lodge＆villaを開業。<br />
+                        ゴルフを楽しんだ後は、<br />
+                        ゴルフ場を眺めながらのんびりと時を過ごせます。
+                    </p>
+                    <a href="#" class="media__btn">詳細はこちら</a>
+                </div>
+            </article>
+
+            <section class="eventInfo">
+                <div class="eventInfo__inner">
+                    <p class="eventInfo__num section__num">03</p>
+                    <h2 class="eventInfo__ttl">EVENT INFO</h2>
+                    <h3 class="eventInfo__subTtl">イベント情報</h3>
+
+                    <ul class="cards">
+                        <li class="cards__item">
+                            <a href="" class="card">
+                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
+                                <figure class="card__figure">
+                                    <img
+                                        class="card__img"
+                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
+
+                                        alt="津カントリー倶楽部　イベント情報"
+                                    />
+                                </figure>
+                                <p class="card__link">View more</p>
+                            </a>
+                        </li>
+                        <li class="cards__item">
+                            <a href="" class="card">
+                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
+                                <figure class="card__figure">
+                                    <img
+                                        class="card__img"
+                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
+
+                                        alt="津カントリー倶楽部　イベント情報"
+                                    />
+                                </figure>
+                                <p class="card__link">View more</p>
+                            </a>
+                        </li>
+                        <li class="cards__item">
+                            <a href="" class="card">
+                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
+                                <figure class="card__figure">
+                                    <img
+                                        class="card__img"
+                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
+
+                                        alt="津カントリー倶楽部　イベント情報"
+                                    />
+                                </figure>
+                                <p class="card__link">View more</p>
+                            </a>
+                        </li>
+                        <li class="cards__item">
+                            <a href="" class="card card__item4">
+                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
+                                <figure class="card__figure">
+                                    <img
+                                        class="card__img"
+                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
+
+                                        alt="津カントリー倶楽部　イベント情報"
+                                    />
+                                </figure>
+                                <p class="card__link">View more</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn eventInfo__btn">イベント情報一覧</a>
+                </div>
+            </section>
+
+            <section class="access">
+                <p class="access__num section__num">04</p>
+                <h2 class="access__ttl">access</h2>
+                <h3 class="access__subTtl">アクセス</h3>
+                <address class="address">
+                    <h4 class="address__ttl">津カントリー倶楽部</h4>
+                    <p class="address__text">
+                        〒514ー0077<br />
+                        三重県津市片田長谷町30番地
+                    </p>
+                    <p class="address__tel--pc">
+                        0120-80-3700<br />
+                        059-237-3580<br />
+                        059-237-3612
+                    </p>
+                    <a class="address__tel" href="tel:090-9090-0990"
+                        ><span class="address__tel--inner"
+                            >090-9090-0990</span
+                        ></a
+                    >
+                </address>
+                <p class="access__btn">ご予約 / 料金</p>
+                <div class="mapWrap">
+                    <iframe
+                        class="map1"
+                        src="https://www.google.com/maps/embed?pb=!4v1648864602689!6m8!1m7!1sCAoSLEFGMVFpcFBRc25wUHptZDdiWGluWEhWWlVRUnMza2dBM0dwUERxOUUyaE9O!2m2!1d34.7210764!2d136.4290364!3f337.06814120749146!4f0.5980200479936286!5f0.7820865974627469"
+                        width="399"
+                        height="214"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                    <iframe
+                        class="map2"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52469.912577721145!2d136.39401747875414!3d34.721078599708534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004094539acbd61%3A0xa76396787de8f7f3!2z5rSl44Kr44Oz44OI44Oq44O85YC25qW96YOo!5e0!3m2!1sja!2sjp!4v1648864854308!5m2!1sja!2sjp"
+                        width="399"
+                        height="214"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </section>
+        </main>
+
 
     
             <footer id="footer">
