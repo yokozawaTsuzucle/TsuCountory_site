@@ -10,7 +10,7 @@
                     <h2 class="guidance__ttl--en">Guidance</h2>
                     <h3 class="guidance__ttl--ja">ご案内</h3>
                 </div>
-                <div class="guidance__img">{{ article.image.src | image_url }}</div>
+                <div class="guidance__img"><img src="{{ article.image.src | image_url }}" alt=""></div>
                 <h1 class="heading-lv1">{{article.title}}</h1>
                 <article class="heading-lv2__wrap">
                   {{article.content}}
