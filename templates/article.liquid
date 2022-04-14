@@ -10,26 +10,11 @@
                     <h2 class="guidance__ttl--en">Guidance</h2>
                     <h3 class="guidance__ttl--ja">ご案内</h3>
                 </div>
-                <div class="guidance__img"></div>
-                <h1 class="heading-lv1">見出し（H1）</h1>
+                <div class="guidance__img">{{ article.image.src | image_url }}</div>
+                <h1 class="heading-lv1">{{article.title}}</h1>
                 <article class="heading-lv2__wrap">
-                    <h2 class="heading-lv2">見出し（H2）</h2>
-                    <p class="guidance__text">
-                        ここにテキストここにテキストここにテキストここにテキストここにテ
-                        ここにテキストここにテキストここにテキストここにテキストここにテ
-                        ここにテキストここにテキストここにテキストここにテキストここにテ
-                        ここにテキストここにテキストここにテキストここにテキスト
-                    </p>
-                </article>
-                <article class="heading-lv2__wrap">
-                    <h2 class="heading-lv2">見出し（H2）</h2>
-                    <p class="guidance__text">
-                        ここにテキストここにテキストここにテキストここにテキストここにテ
-                        ここにテキストここにテキストここにテキストここにテキストここにテ
-                        ここにテキストここにテキストここにテキストここにテキストここにテ
-                        ここにテキストここにテキストここにテキストここにテキスト
-                    </p>
-                </article>
+                  {{article.content}}
+                </article>                
             </section>
             <section class="eventInfo guidanceInfo">
                 <div class="eventInfo__inner">
