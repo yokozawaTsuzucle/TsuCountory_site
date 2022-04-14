@@ -1,3 +1,7 @@
+        {% if template == 'index' %}
+
+        
+        
         <header id="header" class="DownMove">
             <button id="hamburger" class="hamburger">
                 <span class="hamburger__bar barTop"></span>
@@ -112,3 +116,93 @@
                 </ul>
             </nav>
         </header>
+
+        {% else %}
+                <header id="header">
+            <button id="hamburger" class="hamburger">
+                <span class="hamburger__bar barTop"></span>
+                <span class="hamburger__bar barMiddle"></span>
+                <span class="hamburger__bar barBottom"></span>
+            </button>
+
+            <nav class="globalNav--sp">
+                <h2 class="siteLogo">
+                    <a href="">
+                        <img
+                            src="./assets/images/siteLogo-sp.png"
+                            alt="津カントリー倶楽部"
+                            class="siteLogo__img"
+                        />
+                    </a>
+                </h2>
+                <div class="addressWrap--menu">
+                    <a
+                        class="address__tel address__tel--menu"
+                        href="tel:090-9090-0990"
+                        ><span class="address__tel--inner"
+                            >090-9090-0990</span
+                        ></a
+                    >
+                    <p class="access__btn--menu">
+                        <a href="">ご予約 / 料金</a>
+                    </p>
+                </div>
+
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="guidance.html"
+                            >GOLF<span class="ruby">ゴルフ</span></a
+                        >
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">DINNER<span class="ruby">食事</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">STAY<span class="ruby">宿泊</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">EVENT<span class="ruby">イベント</span></a>
+                    </li>
+                    <li class="menu__item menu__item--s">
+                        <a href="#">津カントリー倶楽部について</a>
+                    </li>
+
+                    <li class="menu__item menu__item--s">
+                        <a href="#">アクセス</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn--l">ご予約 / 料金</a>
+                <a href="" class="sns sns--menu"
+                    ><span class="fa-facebook-square"></span
+                ></a>
+
+                <p class="copyright">
+                    <small class="copyright__txt copyright__txt--menu"
+                        >© TSU COUNTRY CLUB</small
+                    >
+                </p>
+            </nav>
+            <nav class="globalNav-2">
+                <p class="pageLogo-pc">
+                    <img
+                        src="./assets/images/pageLogo-pc.png"
+                        alt="津カントリー倶楽部"
+                    />
+                </p>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#">宿泊</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">イベント</a>
+                    </li>
+                    <li class="menu__item menu__item--s">
+                        <a href="">津カントリー倶楽部について </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">アクセス </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        {% endif %}
