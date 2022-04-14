@@ -628,7 +628,7 @@ body {
   width: 7.5vw;
   height: 6.71875vw;
   margin-left: 2.8vw;
-  background-image: url(../../assets/images/tel-icon.png);
+  background-image: url("{{ 'tel-icon.png' | asset_img_url: '3000x'}}");
   background-size: contain;
   content: "";
   vertical-align: middle;
@@ -1098,7 +1098,7 @@ body {
 .pageVisual__img--sp {
   width: 100%;
   height: 58.28125vw;
-  background: url(../../assets/images/pageVisual-sp.jpg) center center/cover no-repeat;
+  background: url("{{ 'pageVisual-sp.jpg' | asset_img_url: '3000x'}}") center center/cover no-repeat;
 }
 
 .pageVisual__img--pc {
@@ -1326,7 +1326,7 @@ body {
 }
 
 .slider-1__item01 {
-  background: url(../../assets/images/TOP/mainvisual-sp.jpg);
+  background: url("{{ 'mainvisual-sp.jpg' | asset_img_url: '3000x'}}");
 }
 
 .slider-1__item {
@@ -1342,7 +1342,7 @@ body {
   position: relative;
   width: 100%;
   height: 148.59375vw;
-  background: url(../../assets/images/TOP/golr-course-sp.jpg);
+  background: url("{{ 'golr-course-sp.jpg' | asset_img_url: '3000x'}}");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1909,7 +1909,7 @@ th {
   width: 100%;
   height: 45.625vw;
   margin: 0 auto 9.8vw;
-  background: url(../../assets/images/guidance.jpg) center center/cover no-repeat;
+  background: url("{{ 'guidance.jpg' | asset_img_url: '3000x'}}") center center/cover no-repeat;
 }
 
 .heading-lv1 {
@@ -1959,7 +1959,7 @@ th {
 .res-price__img--sp {
   width: 100%;
   height: 58.28125vw;
-  background: url(../../assets/images/res&price-sp.jpg) center center/cover no-repeat;
+  background: url("{{ 'res&price-sp.jpg' | asset_img_url: '3000x'}}") center center/cover no-repeat;
 }
 
 .res-price__img--pc {
@@ -2383,7 +2383,7 @@ th {
     display: block;
     width: 100%;
     height: 373px;
-    background: url(../../assets/images/pageVisual-pc.jpg) center center/cover no-repeat;
+    background: url("{{ 'pageVisual-pc.jpg' | asset_img_url: '3000x'}}") center center/cover no-repeat;
   }
   .pageVisual__textWrap{
     left: 50%;
@@ -2564,7 +2564,8 @@ th {
     height: 1px;
   }
   .slider-1__item01{
-    background: url(../../assets/images/TOP/mainvisual-pc.jpg);
+    background: url("{{ 'mainvisual-pc.jpg' | asset_img_url: '3000x'}}");
+
   }
   .slider-1__item{
     height: 491px;
@@ -2576,7 +2577,7 @@ th {
     width: 95vw;
     height: 59.6666666667vw;
     margin: 0 0 0 auto;
-    background: url(../../assets/images/TOP/golf-course-pc.jpg);
+    background: url("{{ 'golf-course-pc.jpg' | asset_img_url: '3000x'}}");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2995,7 +2996,7 @@ th{
     display: block;
     width: 100%;
     height: 373px;
-    background: url(../../assets/images/res&price-pc.jpg) center center/cover no-repeat;
+    background: url("{{ 'res&price-pc.jpg' | asset_img_url: '3000x'}}") center center/cover no-repeat;
   }
   .reserve__subTtl{
     margin-bottom: 53px !important;
