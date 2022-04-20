@@ -1,0 +1,111 @@
+  <script type="text/javascript">
+  window.product = {{product | json}} || {};
+</script>
+
+
+  
+  <main class="product Contents-wrap">
+    
+
+  <section class="sec sec03">
+    <div class="popular_product flex">
+      <div class="product__post">
+
+        <div class="ProductImage">
+
+          <ul class="gallery">
+{% for image in product.images %}
+<li><img src="{{ image | image_url: width: 1000 }}" alt=""></li>
+{% endfor %}
+          </ul>
+
+          <ul class="choice-btn flex slideItemImage">
+{% for image in product.images %}
+<li><img src="{{ image | image_url: width: 1000x }}" alt=""></li>
+{% endfor %}
+
+          </ul>
+        </div>
+        
+        
+      </div>
+
+        <div class="product__detail">
+          <div class="product__detail__stickey">
+  
+            <div class="product__detail__main">
+              
+              <h2>{{ product.title }}</h2>
+              <p class="price">{{ product.price | money }}(税込)
+              </p>
+            </div>
+            <div class="product__detail__text">
+              {{ product.content }}
+            </div>
+  
+  
+            <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
+              <!--<label for="#">お渡し用袋</label>
+                <select name="" id="">
+                  <option value="不要">不要</option>
+                  <option value="要">要</option>
+                </select> -->
+                <div class="counter">
+                  <label for="number">数量</label>
+                      <div class="line_item_count">
+                          <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
+                          <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*">
+                      </div>
+
+                </div>
+
+
+
+              <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
+
+              
+              {%- if variant.inventory_quantity  > 0 -%}
+              	<button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
+              	{%- if variant.inventory_quantity  < 10 -%}
+              		<span style="color:red;">残り在庫 {{ variant.inventory_quantity }} 個です</span>
+              	{%- endif -%}
+              {%- else -%}
+
+              <div class="Btn02"><span>在庫なし</span></div>
+              
+              {%- endif -%}
+              
+            </form>
+
+          
+
+
+               
+                    
+                    
+
+
+                    
+                    
+
+
+
+
+              
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+{% section 'index-collection' %}
+
+  
+  
+
+
+
+</main>
+
+
+
