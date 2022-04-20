@@ -4217,4 +4217,195 @@ th{
 
 }
 
+
+
+/* productページcss */
+.product .sec03 {
+  border-bottom: 1px solid #d9d6d6;
+}
+
+.product .sec03 .maison {
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+.product .sec03 .ProductImage {
+  display: block;
+  width: 780px;
+}
+
+
+.product img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/
+}
+
+.product .gallery {
+  margin: 0 0 5px 0;
+}
+
+.product .gallery li {
+  list-style: none;
+}
+
+.product .slick-prev,
+.product .slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #ccc;
+  /*矢印の色*/
+  border-right: 2px solid #ccc;
+  /*矢印の色*/
+  height: 25px;
+  width: 25px;
+}
+
+.product .slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: 2.5%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.product .slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 2.5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.product .choice-btn li {
+  cursor: pointer;
+  outline: none;
+  background: #333;
+  width: 25% !important;
+  list-style: none;
+}
+
+.product .choice-btn li img {
+  opacity: 0.4;
+  /*選択されていないものは透過40%*/
+}
+
+.product .choice-btn li.slick-current img {
+  opacity: 1;
+  /*選択されているものは透過しない*/
+}
+
+.slideItemImage .slick-track{
+  width: 100% !important;
+}
+
+.product .sec03 .share {
+  margin: 18px 0 21px 0;
+}
+
+.product .sec03 .product__wrap label {
+  display: block;
+}
+
+.product .sec03 .product__wrap select {
+  background: #fff;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  -webkit-appearance: initial;
+  -moz-appearance: initial;
+  appearance: initial;
+  margin: 15px 0;
+  color: #000;
+}
+
+.product .sec03 .alert {
+  margin-top: 5px;
+}
+
+.product .sec03 .alert span {
+  color: #5BAE50;
+}
+
+.product .sec03 .product__post {
+  max-width: calc(100% - 500px);
+  width: 45%;
+}
+
+.product .sec03 .product__post__contents {
+  border-top: 1px solid #d9d6d6;
+  margin-top: 80px;
+  line-height: 1.65;
+}
+
+.product .sec03 .product__post__contents img {
+  display: block;
+  margin: 0 auto;
+}
+
+.product .sec03 .product__post__contents h2 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.product .sec03 .product__post__contents p {
+  margin-top: 30px;
+}
+
+.product .sec03 .product__detail__stickey {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 120px;
+}
+
+.product__post .slick-slide,
+.product__post .slick-list{
+  height: initial !important;
+}
+
+@media (max-width: 768px) {
+  .product .sec03 .product__post {
+    width: 100%;
+    max-width: none;
+
+  }
+  .sec03 .popular_product .product__detail__text{
+    padding-top: 30px;
+    }
+}
+
+.product .sec03 .popular_product {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media (min-width: 1920px) {
+  .product .sec03 .product__post__contents h2 {
+    font-size: 1.5vw;
+  }
+  .product .sec03 .product__post__contents img {
+    width: 90%;
+  }
+  .product .sec03 .product__post__contents p {
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 1920px) {
+  .product .sec03 .ProductImage {
+    width: 100%;
+  }
+  .product .sec03 .product__post__contents img {
+    width: 90%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
