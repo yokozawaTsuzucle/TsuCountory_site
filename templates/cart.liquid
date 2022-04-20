@@ -1,0 +1,55 @@
+<div class="section_container Contents-wrap">
+        <div class="section_inner">
+            <div class="section_title font01">カートの商品</div>
+            <form method="post" class="cart_form">
+            <div class="cart_items_box">
+
+
+              {% for line_item in cart.items %}
+                  <div class="line_item">
+                   
+                     <div class="line_item_inner">
+                         <img src="{{line_item.image | product_img_url: '1920x'}}" alt="">
+                         <div class="line_info_inner">
+                             <div class="line_item_name font02">{{line_item.title}}</div>
+                      <div class="line_item_count">
+                          <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
+                          <input type="number" name="updates[]" class="btn btn-default" value={{line_item.quantity}} min="0" pattern="[0-9]*">
+                      </div>
+                      <div class="line_item_price font01 bold">{{line_item.line_price | money}} (税込)</div>
+                      
+                     </div>
+                         </div>
+                      
+                     <a class="delete_btn" href="/cart/change?line={{forloop.index}}&quantity=0" rel={{line_item.id}}><span class="fas fa-trash-alt"></span>削除</a>  
+                  </div>
+              {% endfor %}  
+                
+                
+                <div class="cart_total_price bold font02">
+                    合計金額 {{cart.total_price | money}}(税込)
+                </div>
+              
+              {% render"cart-attributes-os1"%}
+
+<!--
+                <div class="cart_btn_box">
+                    <div class="Btn02 bgleft02">
+                     <input type="submit" name="update" class="" value="カートを更新">
+                    </div>
+                    <div class="Btn02 bgleft02">
+                        <input type="submit" name="checkout" class="" value=""><span>購入に進む</span>
+                    </div>
+                </div>
+
+-->
+                <div class="cart_btn_box">
+                    <input type="submit" name="update" class="cart_checkout_btn font02" value="カートを更新">
+                    <input type="submit" name="checkout" class="cart_checkout_btn font02"value="購入に進む">
+                </div>
+                
+                
+              </form>  
+            </div>
+        </div>
+    </div>
