@@ -1,0 +1,42 @@
+  
+  
+  
+  <section class="2022_new_collection sec Contents-wrap">
+
+    <h2>焼肉ジャンボオンライン商品一覧</h2>
+    
+
+    <div class="collection-wrap flex">
+     
+    
+    <!-- collectionの分岐を追加 -->
+    
+    {% paginate collection.products by 8 %}
+
+    {% if collection.handle == 'burg' %}
+    {% assign collection = collections.burg %}
+    {% else %}
+    {% assign collection = collections.all %}
+    {%endif%}
+
+     
+    {% for product in collection.products %}
+      <a href="{{ product.url }}" class="product_card box fadeUpTrigger">
+        <img src="{{product.featured_image.src | img_url: '1920x'}}" alt="">
+        <h3>{{ product.title }}</h3>
+        <p class="price">{{ product.price | money }}(税込)</p>
+        <p class="Btn bgleft"><span>詳細を見る</span></p>
+      </a>
+    {% endfor %}
+
+    
+    {% endpaginate %}
+
+    </div>
+
+    
+    
+
+  </section>
+
+
