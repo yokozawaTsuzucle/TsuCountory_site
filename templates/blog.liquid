@@ -21,7 +21,7 @@
                 <ul class="posts">
                     {% for article in blog.articles %}
                     <li class="posts__item">
-                        <a href="{article.url}" class="post">
+                        <a href="{{article.url}}" class="post">
                             <figure class="post__figure">
                                 <img
                                     src="{{article.image.src | img_url : '2000x'}}"
