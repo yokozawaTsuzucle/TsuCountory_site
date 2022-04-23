@@ -157,69 +157,29 @@
                     <h3 class="eventInfo__subTtl">イベント情報</h3>
 
                     <ul class="cards">
+                     {% for article in blogs['event'].articles %}
                         <li class="cards__item">
-                            <a href="" class="card">
-                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
+                            <a href="{{article.url}}" class="card">
+                                <p class="{{article.title}}">「瀬戸内国際芸術祭」。</p>
                                 <figure class="card__figure">
                                     <img
                                         class="card__img"
-                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
-
+                                        src="{{article.image.src | img_url : '2000x'}}"
                                         alt="津カントリー倶楽部　イベント情報"
                                     />
                                 </figure>
                                 <p class="card__link">View more</p>
                             </a>
                         </li>
-                        <li class="cards__item">
-                            <a href="" class="card">
-                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
-                                <figure class="card__figure">
-                                    <img
-                                        class="card__img"
-                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
+                        {% endfor %}
 
-                                        alt="津カントリー倶楽部　イベント情報"
-                                    />
-                                </figure>
-                                <p class="card__link">View more</p>
-                            </a>
-                        </li>
-                        <li class="cards__item">
-                            <a href="" class="card">
-                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
-                                <figure class="card__figure">
-                                    <img
-                                        class="card__img"
-                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
-
-                                        alt="津カントリー倶楽部　イベント情報"
-                                    />
-                                </figure>
-                                <p class="card__link">View more</p>
-                            </a>
-                        </li>
-                        <li class="cards__item">
-                            <a href="" class="card card__item4">
-                                <p class="card__ttl">「瀬戸内国際芸術祭」。</p>
-                                <figure class="card__figure">
-                                    <img
-                                        class="card__img"
-                                        src="{{ 'loge-villa-pc.jpg' | asset_img_url: '3000x'}}"
-
-                                        alt="津カントリー倶楽部　イベント情報"
-                                    />
-                                </figure>
-                                <p class="card__link">View more</p>
-                            </a>
-                        </li>
                     </ul>
-                    <a href="#" class="btn eventInfo__btn">イベント情報一覧</a>
+                    <a href="{{ blogs['event'].url }}" class="btn eventInfo__btn">イベント情報一覧</a>
                 </div>
             </section>
 
             <section class="access">
-                <p class="access__num section__num">04</p>
+                <p class="access__num section__num">05</p>
                 <h2 class="access__ttl">access</h2>
                 <h3 class="access__subTtl">アクセス</h3>
                 <address class="address">
