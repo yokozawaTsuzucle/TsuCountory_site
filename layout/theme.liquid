@@ -48,7 +48,7 @@
     
 
             <footer id="footer">
-            <a href="" class="sns"><span class="fa-facebook-square"></span></a>
+            <a href="" class="sns"><i class="fa-brands fa-facebook-square"></i></a>
             <nav class="footerNav">
                 <ul class="menu">
                 {% for link in linklists.footer.links %}
@@ -74,6 +74,8 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+
+        <script src="https://kit.fontawesome.com/14c63bdccc.js" crossorigin="anonymous"></script>
         
         {{ 'main.js' | asset_url | script_tag }}
     </body>
