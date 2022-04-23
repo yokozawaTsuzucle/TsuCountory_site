@@ -1,0 +1,158 @@
+        {% if template == 'index' %}
+
+        
+        
+        <header id="header" class="DownMove">
+            <button id="hamburger" class="hamburger">
+                <span class="hamburger__bar barTop"></span>
+                <span class="hamburger__bar barMiddle"></span>
+                <span class="hamburger__bar barBottom"></span>
+            </button>
+
+            <nav class="globalNav--sp">
+                <h2 class="siteLogo">
+                    <a href="{{ shop.url }}">
+                        <img
+                            src="{{ 'siteLogo-sp.png' | asset_img_url: '1200x'}}"
+                            alt="津カントリー倶楽部"
+                            class="siteLogo__img"
+                        />
+                    </a>
+                </h2>
+                <div class="addressWrap--menu">
+                    <a
+                        class="address__tel address__tel--menu"
+                        href="tel:090-9090-0990"
+                        ><span class="address__tel--inner"
+                            >090-9090-0990</span
+                        ></a
+                    >
+                    <p class="access__btn--menu">
+                        <a href="{{ pages.reserve.url }}">ご予約 / 料金</a>
+                    </p>
+                </div>
+
+                <ul class="menu">
+                {% for link in linklists.hamburger.links %}
+                     <li class="menu__item">
+                        <a href="{{ link.url }}">{{link.title}}</a>
+                     </li>
+                {% endfor %}
+                </ul>
+
+                <a href="{{ pages.reserve.url }}" class="btn btn--l">ご予約 / 料金</a>
+                <a href="" class="sns sns--menu"
+                    ><span class="fa-facebook-square"></span
+                ></a>
+
+                <p class="copyright">
+                    <small class="copyright__txt copyright__txt--menu"
+                        >© TSU COUNTRY CLUB</small
+                    >
+                </p>
+            </nav>
+            <section class="mainVisual">
+                <ul class="slider-1">
+                    <li class="slider-1__item slider-1__item01"></li>
+                    <li class="slider-1__item slider-1__item02"></li>
+                    <li class="slider-1__item slider-1__item03"></li>
+                    <li class="slider-1__item slider-1__item04"></li>
+                </ul>
+                <div class="mainVisual__txtWrap">
+                    <h2 class="siteTtl">next golf community</h2>
+                    <h1 class="siteLogo">
+                        <img
+                            src="{{ 'siteLogo.png' | asset_img_url: '1200x'}}"
+                            alt="津カントリー倶楽部"
+                            class="siteLogo__img"
+                        />
+                    </h1>
+                </div>
+            </section>
+           
+
+            <nav class="globalNav">
+                <ul class="menu">
+                {% for link in linklists.main-menu.links %}
+                     <li class="menu__item">
+                        <a href="{{ link.url }}">{{link.title}}</a>
+                     </li>
+                {% endfor %}
+                    <li class="menu__item--box">
+                        <a href="{{ pages.reserve.url }}">ご予約 / 料金 </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        {% else %}
+                <header id="header">
+            <button id="hamburger" class="hamburger">
+                <span class="hamburger__bar barTop"></span>
+                <span class="hamburger__bar barMiddle"></span>
+                <span class="hamburger__bar barBottom"></span>
+            </button>
+
+            <nav class="globalNav--sp">
+                <h2 class="siteLogo">
+                    <a href="">
+                        <img
+                            src="{{'siteLogo-sp.png' | asset_img_url: '2000x'}}"
+                            
+                            
+                            alt="津カントリー倶楽部"
+                            class="siteLogo__img"
+                        />
+                    </a>
+                </h2>
+                <div class="addressWrap--menu">
+                    <a
+                        class="address__tel address__tel--menu"
+                        href="tel:090-9090-0990"
+                        ><span class="address__tel--inner"
+                            >090-9090-0990</span
+                        ></a
+                    >
+                    <p class="access__btn--menu">
+                        <a href="{{ pages.reserve.url }}">ご予約 / 料金</a>
+                    </p>
+                </div>
+
+                <ul class="menu">
+                {% for link in linklists.hamburger.links %}
+                     <li class="menu__item">
+                        <a href="{{ link.url }}">{{link.title}}</a>
+                     </li>
+                {% endfor %}
+                </ul>
+
+                <a href="{{ pages.reserve.url }}" class="btn btn--l">ご予約 / 料金</a>
+                <a href="" class="sns sns--menu"
+                    ><span class="fa-facebook-square"></span
+                ></a>
+
+                <p class="copyright">
+                    <small class="copyright__txt copyright__txt--menu"
+                        >© TSU COUNTRY CLUB</small
+                    >
+                </p>
+            </nav>
+            <nav class="globalNav-2">
+                <p class="pageLogo-pc">
+                    <img
+                        src="{{'pageLogo-pc.png' | asset_img_url: '2000x' }}"
+                        alt="津カントリー倶楽部"
+                    />
+                </p>
+               
+
+                <ul class="menu">
+                {% for link in linklists.sub-menu.links %}
+                     <li class="menu__item">
+                        <a href="{{ link.url }}">{{link.title}}</a>
+                     </li>
+                {% endfor %}
+                </ul>
+            </nav>
+        </header>
+        {% endif %}
