@@ -1,0 +1,77 @@
+<div class="section_container Contact">
+    <div class="section_inner">
+        
+
+
+
+        <div class="contact-form font02">
+            {% form 'contact' %}
+            {% if form.posted_successfully? %}
+            
+            <div class="thanks_section center">
+                <div class="font01">Thank you</div>
+                <p class="font02 thanks_comp">お問い合わせが完了しました。</p>
+                
+                <div class="thanks_bottom font02">
+                    <p class="under_space">お問い合わせ内容の送信が完了いたしました。</p>
+                    <p>1~3営業日以内にご返信させていただきます</p>
+                </div>
+            </div>
+
+            {% else %}
+            <div class="section_title font02">お問い合わせ</div>
+            <div class="name_form">
+                <div class="form-group left_form">
+                    <p>お名前<span id="c-red">*</span></p>
+                    <input required class=”required" class="form-control" type="text" placeholder="" name="contact[name]" id="name">
+                </div>
+
+                <div class="form-group">
+                    <p>お名前(ふりがな)<span id="c-red">*</span></p>
+                    <input required class=”required" type="text" placeholder="" class="form-control" name="contact[name]" id="name">
+                </div>
+            </div>
+
+
+            <div class="mail_form">
+                <div class="form-group left_form">
+                    <p>メールアドレス<span id="c-red">*</span></p>
+                    <input required class=”required" type="email" placeholder="" class="form-control " name="contact[email]" id="email">
+                </div>
+
+                <div class="form-group">
+                    <p>メールアドレス（確認用）<span id="c-red">*</span></p>
+                    <input required class=”required" type="email" placeholder="" class="form-control" name="contact[email]" id="email">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <p>電話番号<span id="c-red">*</span></p>
+                <input required class=”required" type="text" placeholder="" class="form-control" name="contact[number]" id="subject">
+            </div>
+
+            <div class="form-group">
+                <p>お問い合わせ内容<span id="c-red">*</span></p>
+                <textarea required class=”required" rows="6" placeholder="" class="form-control" name="contact[message]" id="message"></textarea>
+            </div>
+
+            <div class="contact_text font02">
+                <span id="c-red">※ご注文に関するお問い合わせには、必ず「ご注文者さまのお名前、お電話番号、ご注文番号」を記入くださいますようお願いいたします。</span>
+                <br><br>
+                お問い合わせいただいた内容によっては、回答をさしあげるのにお時間をいただくこともございます。営業日は平日9:00〜18:00（土日祝を除く）となるため、時間外のお問い合わせは翌営業日以降のご返信となりますのでご了承くださいませ。
+            </div>
+            <div>
+                <input type="submit" id="contact-submit" class="b_hover btn btn-submit font02 bold" value="送信する">
+            </div>
+
+
+            
+            {% endif%}
+
+
+        {% endform %}
+
+        </div>
+    </div>
+</div>
