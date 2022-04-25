@@ -51,10 +51,10 @@
             </nav>
             <section class="mainVisual">
                 <ul class="slider-1">
-                    <li class="slider-1__item slider-1__item01"></li>
-                    <li class="slider-1__item slider-1__item02"></li>
-                    <li class="slider-1__item slider-1__item03"></li>
-                    <li class="slider-1__item slider-1__item04"></li>
+                    <li id="slider-1__item01"class="slider-1__item" style="background-image: url('{{section.settings.slider-1__item01 | img_url: '1920x'}}'); "></li>
+                    <li id="slider-1__item02"class="slider-1__item" style="background-image: url('{{section.settings.slider-1__item02 | img_url: '1920x'}}'); "></li>
+                    <li id="slider-1__item03"class="slider-1__item" style="background-image: url('{{section.settings.slider-1__item03 | img_url: '1920x'}}'); "></li>
+                    <li id="slider-1__item04"class="slider-1__item" style="background-image: url('{{section.settings.slider-1__item04 | img_url: '1920x'}}'); "></li>
                 </ul>
                 <div class="mainVisual__txtWrap">
                     <h2 class="siteTtl">next golf community</h2>
@@ -152,3 +152,36 @@
             </nav>
         </header>
         {% endif %}
+
+
+
+{% schema %}
+
+{
+    "name": "Main Visual",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "slider-1__item01",
+            "label": "Main Slider01"
+        },  
+        {
+            "type": "image_picker",
+            "id": "slider-1__item02",
+            "label": "Main Slider02"
+        },  
+        {
+            "type": "image_picker",
+            "id": "slider-1__item03",
+            "label": "Main Slider03"
+        },  
+        {
+            "type": "image_picker",
+            "id": "slider-1__item04",
+            "label": "Main Slider04"
+        }
+    ]
+}
+
+
+{% endschema %}
