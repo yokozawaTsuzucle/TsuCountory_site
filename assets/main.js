@@ -17,7 +17,8 @@ $(".slider-1").slick({
     arrows: false,
 });
 $(".slider-2").slick({
-    autoplay: true,
+    // autoplay: true,
+    autoplay: false,
     infinite: true,
     autoplaySpeed: 2000, 
     speed: 500, 
