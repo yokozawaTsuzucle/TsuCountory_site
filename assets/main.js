@@ -23,6 +23,7 @@ $(".slider-2").slick({
     speed: 500, 
     arrows: false,
     dots: true, 
+    dotsClass: 'about-dots'
 });
 $(".slider-3").slick({
     infinite: true,
