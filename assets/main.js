@@ -10,7 +10,7 @@ $("#hamburger").click(function () {
 $(".slider-1").slick({
     fade: true, 
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000, 
     speed: 500, 
     arrows: false,
