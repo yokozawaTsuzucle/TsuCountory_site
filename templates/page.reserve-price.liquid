@@ -39,11 +39,11 @@
             {% comment %} iframe押せない問題の対応 {% endcomment %}
 
                 {% case responsive %}
-                    {%  when 'desktop' %}
+                    {% when 'desktop' %}
                         {%render 'iframe-pc'%}
-                    {%  when 'tablet' %}
+                    {% when 'tablet' %}
                         {%render 'iframe-pc'%}
-                    {%  when 'mobile' %}
+                    {% when 'mobile' %}
                         {%render 'iframe-splink'%}
                 {% endcase %}
                     
