@@ -36,13 +36,26 @@
                 <h2 class="eventInfo__ttl">Reserve</h2>
                 <h3 class="eventInfo__subTtl reserve__subTtl">ご予約</h3>
             </div>
-            {% comment %} iframe押せない問題の対応 {% endcomment %}
 
-                        {%render 'iframe-pc'%}
-                    
+{% comment %}cssで出し分ける {% endcomment %}
+
+            <div class="iframe-plan">
+                <iframe
+                    src="https://webpack2.jp/iframeApp/533302"
+                    width="566"
+                    height="361"
+                    style="margin: 0 auto"
+                ></iframe>
+            </div>
 
 
-            {% comment %} ここまで {% endcomment %}
+
+
+            <a class="iframe-plan-sp" href="https://webpack2.jp/iframeApp/533302">
+              予約はこちらからバナーが入る
+            </a>
+
+{% comment %} ここまで {% endcomment %}
 
             <div id="price" class="sectionHeading">
                 <p class="eventInfo__num section__num">02.</p>
