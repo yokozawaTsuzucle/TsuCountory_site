@@ -13,8 +13,8 @@ $(".slider-1").slick({
     autoplay: true,
     autoplaySpeed: 3000, 
     speed: 500, 
-    arrows: false,
     dots: true, 
+    arrows: false,
 });
 $(".slider-2").slick({
     autoplay: true,
