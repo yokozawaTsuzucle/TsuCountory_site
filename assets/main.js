@@ -24,6 +24,7 @@ $(".slider-2").slick({
     speed: 500, 
     arrows: false,
     dots: true, 
+    pauseOnHover: false,
     
 });
 $(".slider-3").slick({
