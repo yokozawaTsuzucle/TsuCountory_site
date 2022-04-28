@@ -101,9 +101,9 @@
         "type": "header",
         "settings": {
           "slider-1__item01": "shopify:\/\/shop_images\/mainvisual-pc.jpg",
-          "slider-1__item02": "shopify:\/\/shop_images\/golf-course-pc.jpg",
-          "slider-1__item03": "shopify:\/\/shop_images\/loge-villa.jpg",
-          "slider-1__item04": "shopify:\/\/shop_images\/golf-originalCourse-pc.jpg"
+          "slider-1__item02": "shopify:\/\/shop_images\/morning.jpg",
+          "slider-1__item03": "shopify:\/\/shop_images\/night.jpg",
+          "slider-1__item04": "shopify:\/\/shop_images\/slider4.jpg"
         }
       }
     },
