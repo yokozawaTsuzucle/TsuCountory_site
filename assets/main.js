@@ -20,7 +20,7 @@ $(".slider-2").slick({
     autoplay: true,
     // autoplay: false,
     infinite: true,
-    autoplaySpeed: 500, 
+    autoplaySpeed: 50, 
     speed: 500, 
     arrows: false,
     dots: true, 
