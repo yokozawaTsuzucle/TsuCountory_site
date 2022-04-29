@@ -21,9 +21,8 @@
                     data-rellax-percentage="0.5"
                 >
                     <p class="media__num section__num">01.</p>
-                    <h3 class="media__ttl">
-                        広大な敷地内にレイアウトされた<br />
-                        戦略性に富むオリジナルコース
+                    <h3 class="media__ttl" id="contentsHead01">
+                        {{ section.settings.contentsHead01 }} 
                     </h3>
                     {% comment %} <p class="media__text">
                         
@@ -35,18 +34,8 @@
                         戦略的で魅力的なコースがお待ちしています。
                     </p> {% endcomment %}
 
-                    <p class="media__text">
-                    尾崎将司プロと佐藤謙太郎氏の設計・監修による、<br>
-                    豊富なデータを生かした特徴的なコースデザイン。<br>
-
-                    7,023ヤードというロングディスタンスのコースは、<br>
-                    ベントのワングリーンやそそり立つリベットバンカー、<br>
-                    レンガに囲まれた大きな池など、<br>
-                    美しさと戦略性が見事なバランスを保ち、<br>
-                    プレイヤーの挑戦意欲をかき立てます。<br>
-
-                    四季を通じて美しい緑を舞台に、<br>
-                    ベストコンディションでプレイが楽しめます。<br>
+                    <p class="media__text" id="contentsDetail01">
+                    {{ section.settings.contentsDetail01 }} 
                     </p>
 
                     
@@ -69,15 +58,12 @@
                     data-rellax-percentage="0.5"
                 >
                     <p class="media__num section__num">02.</p>
-                    <h3 class="media__ttl">
-                        ゴルフ場までの距離0m<br />
-                        日本の伝統美を感じるロッジへの滞在
+                    <h3 class="media__ttl" id="contentsHead02">
+                        {{ section.settings.contentsHead02 }} 
                     </h3>
-                    <p class="media__text">
-                        18番ホールを望む最高のロケーションに<br />
-                        KATADA Lodge＆villaを開業。<br />
-                        ゴルフを楽しんだ後は、<br />
-                        ゴルフ場を眺めながらのんびりと時を過ごせます。
+                    <p class="media__text" id="contentsDetail02">
+                        
+                        {{ section.settings.contentsDetail02 }} 
                     </p>
                     <a href="{{pages.facility.url}}" class="media__btn">詳細はこちら</a>
                 </div>
@@ -106,19 +92,19 @@
                     data-rellax-percentage="0.5"
                 >
                     <p class="media__num section__num">03.</p>
-                    <h3 class="media__ttl">
-                        地域を守ってくれている神様<br />
-                        椿神山との繋がり
+                    <h3 class="media__ttl" id="contentsHead03">
                         
+                        {{ section.settings.contentsHead03 }} 
                     </h3>
-                    <p class="media__text">
-                        津カントリー倶楽部の近隣には二千年の歴史を持つ<br />
+                    <p class="media__text" id="contentsDetail03">
+                        {% comment %} 津カントリー倶楽部の近隣には二千年の歴史を持つ<br />
                         日本最古の神社である椿神山があります。<br />
                         深い竹林の向こうにある椿神山は、<br />
                         津カントリー倶楽部のクラブハウス真正面方向に位置します。<br />
                         椿神山にも大黒様がいらっしゃいます。<br />
                         椿神山はゴルフ場全てを見渡す場所にあるので、<br />
-                        毎日私たちのプレーを見守ってくれています。
+                        毎日私たちのプレーを見守ってくれています。 {% endcomment %}
+                        {{ section.settings.contentsDetail03 }} 
                     </p>
                     
                 </div>
@@ -133,33 +119,62 @@
      {
        "type": "text",
        "id": "contentsHead01",
-       "label": Top-Contents-Head01
+       "label": "Top-Contents-Head01",
+       "default": "広大な敷地内にレイアウトされた
+                        戦略性に富むオリジナルコース"
      },
      {
        "type": "textarea",
        "id": "contentsDetail01",
-       "label": Top-Contents-Detail01
+       "label": "Top-Contents-Detail01",
+       "defalt": "尾崎将司プロと佐藤謙太郎氏の設計・監修による、
+                    豊富なデータを生かした特徴的なコースデザイン。
+
+                    7,023ヤードというロングディスタンスのコースは、
+                    ベントのワングリーンやそそり立つリベットバンカー、
+                    レンガに囲まれた大きな池など、
+                    美しさと戦略性が見事なバランスを保ち、
+                    プレイヤーの挑戦意欲をかき立てます。
+
+                    四季を通じて美しい緑を舞台に、
+                    ベストコンディションでプレイが楽しめます。"
      },
      {
        "type": "text",
        "id": "contentsHead02",
-       "label": Top-Contents-Head02
+       "label": "Top-Contents-Head02",
+       "defalt": "ゴルフ場までの距離0m
+                        日本の伝統美を感じるロッジへの滞在"
      },
      {
        "type": "textarea",
        "id": "contentsDetail02",
-       "label": Top-Contents-Detail02
+       "label": "Top-Contents-Detail02",
+       "defalt": "18番ホールを望む最高のロケーションに
+                        KATADA Lodge＆villaを開業。
+                        ゴルフを楽しんだ後は、
+                        ゴルフ場を眺めながらのんびりと時を過ごせます。"
      },
      {
        "type": "text",
        "id": "contentsHead03",
-       "label": Top-Contents-Head03
+       "label": "Top-Contents-Head03",
+       "defalt": "地域を守ってくれている神様
+                        椿神山との繋がり"
+
      },
      {
        "type": "textarea",
        "id": "contentsDetail03",
-       "label": Top-Contents-Detail03
-     },
+       "label": "Top-Contents-Detail03",
+       "defalt": " 津カントリー倶楽部の近隣には二千年の歴史を持つ
+                        日本最古の神社である椿神山があります。
+                        深い竹林の向こうにある椿神山は、
+                        津カントリー倶楽部のクラブハウス真正面方向に位置します。
+                        椿神山にも大黒様がいらっしゃいます。
+                        椿神山はゴルフ場全てを見渡す場所にあるので、
+                        毎日私たちのプレーを見守ってくれています。"
+     }
 
    ]
  }
