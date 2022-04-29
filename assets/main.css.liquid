@@ -1351,6 +1351,52 @@ body {
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
 }
+
+.slider-2::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: inherit;
+  
+  z-index: -1;
+}
+
+/* css animation */
+.slider-2::before{
+  animation: bgchange 10s ease infinite; 
+}
+
+
+.slider-2 {
+  animation: bgsizeChange 30s ease infinite;
+}
+
+@keyframes bgsizeChange{
+  0%{
+    background-size: 150%;
+  }
+  25%{
+    background-size: 120%;
+  }
+  50%{
+    background-size: 100%;
+  }
+  75%{
+    background-size: 120%;
+  }
+
+  100%{
+    background-size: 150%;
+  }
+}
+
+
+
 .slider-2 .slick-dots {
   bottom: 77vw;
   left: -40vw;
@@ -1364,6 +1410,7 @@ body {
   width: 96.875vw !important;
   height: 148.59375vw !important;
   padding-left: 10vw;
+  
 }
 
 .slider-2__ttl {
@@ -1371,6 +1418,7 @@ body {
   font-weight: bold;
   font-size: 3.90625vw;
   letter-spacing: 0.3em;
+  text-shadow: 0 0 10px #333;
 }
 
 .slider-2__subTtl {
@@ -1405,6 +1453,15 @@ body {
 .slider-2 .slick-dots li button:before{
   font-size: 80px !important;
   color: #fff;
+  position: absolute;
+  z-index: 4; 
+  content: "";
+}
+
+.slider-2 .slick-dots li button:before,
+.slider-2 .slick-dots li button:after{
+  
+  
 }
 
 
@@ -2625,9 +2682,6 @@ th {
     left: -33.3333333333vw;
   }
 
-  .slider2 .slickdots li button:before{
-    
-  }
   .slider-2__item{
     width: 95.0833333333vw !important;
     height: 59.6666666667vw !important;
