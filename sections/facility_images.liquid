@@ -1,7 +1,149 @@
+
+            <section class="thumbnail">
+                <ul class="thumbnail__list">
+                    <li class="thumbnail__item">
+                        <a href="" class="thumbnail__link">
+                            <img
+                                 id="facility_image_clubhouse"
+                                src="{{section.settings.facility_image_clubhouse | img_url: '2000x'}}"
+                                width="284"
+                                height="179"
+                                alt="津カントリー倶楽部　クラブハウス"
+                            />
+
+                            <div class="thumbnail__ttl--wrap">
+                                <p class="thumbnail__ttl--en">club house</p>
+                                <p class="thumbnail__ttl--ja">クラブハウス</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="thumbnail__item">
+                        <a href="" class="thumbnail__link">
+                            <img
+                                id="facility_image_restaurant"
+                                src="{{section.settings.facility_image_restaurant | img_url: '2000x'}}"
+                                width="284"
+                                height="179"
+                                alt="津カントリー倶楽部　レストラン"
+                            />
+
+                            <div class="thumbnail__ttl--wrap">
+                                <p class="thumbnail__ttl--en">restaurant</p>
+                                <p class="thumbnail__ttl--ja">レストラン</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="thumbnail__item">
+                        <a href="" class="thumbnail__link">
+                            <img
+                                  id="facility_image_lounge"
+                                src="{{section.settings.facility_image_lounge | img_url: '2000x'}}"
+                                width="284"
+                                height="179"
+                                alt="津カントリー倶楽部　ラウンジ「フォンテンブロウ」"
+                            />
+
+                            <div class="thumbnail__ttl--wrap">
+                                <p class="thumbnail__ttl--en">Lounge</p>
+                                <p class="thumbnail__ttl--ja">
+                                    ラウンジ「フォンテンブロウ」
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="thumbnail__item">
+                        <a href="" class="thumbnail__link">
+                            <img
+                                  id="facility_image_bath"
+                                src="{{section.settings.facility_image_bath | img_url: '2000x'}}"
+                                width="284"
+                                height="179"
+                                alt="津カントリー倶楽部　大浴場"
+                            />
+
+                            <div class="thumbnail__ttl--wrap">
+                                <p class="thumbnail__ttl--en">Big bath</p>
+                                <p class="thumbnail__ttl--ja">大浴場</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="thumbnail__item">
+                        <a href="" class="thumbnail__link">
+                            <img
+                                  id="facility_image_vip"
+                                src="{{section.settings.facility_image_vip | img_url: '2000x'}}"
+                                width="284"
+                                height="179"
+                                alt="津カントリー倶楽部　貴賓室「初紅葉」"
+                            />
+
+                            <div class="thumbnail__ttl--wrap">
+                                <p class="thumbnail__ttl--en">VIP room</p>
+                                <p class="thumbnail__ttl--ja">
+                                    貴賓室「初紅葉」
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="thumbnail__item">
+                        <a href="" class="thumbnail__link">
+                            <img
+                                  id="facility_image_course"
+                                src="{{section.settings.facility_image_course | img_url: '2000x'}}"
+                                width="284"
+                                height="179"
+                                alt="津カントリー倶楽部　ゴルフコース"
+                            />
+
+                            <div class="thumbnail__ttl--wrap">
+                                <p class="thumbnail__ttl--en">Golf course</p>
+                                <p class="thumbnail__ttl--ja">ゴルフコース</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [
+ 		{
+            "type": "image_picker",
+            "id": "facility_image_clubhouse",
+            "label": "image_clubhouse"
+        },
+
+ 		{
+            "type": "image_picker",
+            "id": "facility_image_restaurant",
+            "label": "image_restaurant"
+        },
+
+ 		{
+            "type": "image_picker",
+            "id": "facility_image_lounge",
+            "label": "image_lounge"
+        },
+
+ 		{
+            "type": "image_picker",
+            "id": "facility_image_bath",
+            "label": "image_bath"
+        },
+
+ 		{
+            "type": "image_picker",
+            "id": "facility_image_vip",
+            "label": "image_vip"
+        },
+
+ 		{
+            "type": "image_picker",
+            "id": "facility_image_course",
+            "label": "image_course"
+        }
+
+]
   }
 {% endschema %}
 
