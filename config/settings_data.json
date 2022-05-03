@@ -122,6 +122,17 @@
         "settings": {
           "about_image": "shopify:\/\/shop_images\/pexels-kindel-media-6572980.jpg"
         }
+      },
+      "facility_images": {
+        "type": "facility_images",
+        "settings": {
+          "facility_image_clubhouse": "shopify:\/\/shop_images\/IMG_0969.jpg",
+          "facility_image_restaurant": "shopify:\/\/shop_images\/rest_2105_002.jpg",
+          "facility_image_lounge": "shopify:\/\/shop_images\/facilities_lounge_03new.jpg",
+          "facility_image_bath": "shopify:\/\/shop_images\/onsen_daiyokujo_ph04.jpg",
+          "facility_image_vip": "shopify:\/\/shop_images\/facility_190718_01.jpg",
+          "facility_image_course": "shopify:\/\/shop_images\/slider4.jpg"
+        }
       }
     },
     "content_for_index": [
