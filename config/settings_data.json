@@ -116,6 +116,12 @@
           "contentsHead03": "地域を守ってくれている神様             <br>            椿神山との繋がり",
           "contentsDetail03": "津カントリー倶楽部の近隣には二千年の歴史を持つ\n                        日本最古の神社である椿神山があります。\n                        深い竹林の向こうにある椿神山は、\n                        津カントリー倶楽部のクラブハウス真正面方向に位置します。\n                        椿神山にも大黒様がいらっしゃいます。\n                        椿神山はゴルフ場全てを見渡す場所にあるので、\n                        毎日私たちのプレーを見守ってくれています。"
         }
+      },
+      "top-about": {
+        "type": "top-about",
+        "settings": {
+          "about_image": "shopify:\/\/shop_images\/pexels-kindel-media-6572980.jpg"
+        }
       }
     },
     "content_for_index": [
