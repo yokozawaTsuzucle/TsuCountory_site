@@ -11,7 +11,7 @@ $(".slider-1").slick({
     fade: true, 
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000, 
+    autoplaySpeed: 6000, 
     speed: 500, 
     dots: true, 
     arrows: false,
