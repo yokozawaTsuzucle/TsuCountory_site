@@ -37,7 +37,8 @@
     </head>
     {%if template != 'index'%}
     <body class="postContainer">
-    {% else %}
+    {% elsif template == 'collection'  or 'Product' or 'cart' %}
+         <body class="postContainer backWhite"> 
     <body>
     {% endif %}
     {% section 'header' %}
