@@ -38,7 +38,14 @@
 
      
      {%if template != 'index'%}
-    <body class="postContainer">
+		<!--      さらにEC機能のみ背景を白に変更するための分岐を追加     -->
+            {% if template == 'cart' or 'product' or 'collection' %}
+                  <body class="postContainer backWhite">
+             {% else %}
+                   <body class="postContainer">
+             {% endif %}
+          <!--  ここまで  -->
+
      {% else %}
     <body>
     {% endif %}
