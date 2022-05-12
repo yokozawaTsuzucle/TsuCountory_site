@@ -84,7 +84,12 @@
         </header>
 
         {% else %}
-                <header id="header">
+               {%  if template ==  'collection' or 'product' or 'cart' %}
+                <header id="header subheader">
+                {% else %}
+                 <header id="header">
+                 {% endif %}
+ 
             <button id="hamburger" class="hamburger">
                 <span class="hamburger__bar barTop"></span>
                 <span class="hamburger__bar barMiddle"></span>
