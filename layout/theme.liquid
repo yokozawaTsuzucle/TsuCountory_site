@@ -35,10 +35,11 @@
         <script src="https://kit.fontawesome.com/14c63bdccc.js" crossorigin="anonymous"></script>
         <title>津カントリー倶楽部</title>
     </head>
-    {%if template != 'index'%}
-    <body class="postContainer">
-    {% elsif template == 'collection'  or 'Product' or 'cart' %}
+
+    {% if template == 'collection'  or 'Product' or 'cart' %}
          <body class="postContainer backWhite"> 
+     {%elsif template != 'index'%}
+    <body class="postContainer">
      {% else %}
     <body>
     {% endif %}
