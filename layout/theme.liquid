@@ -37,9 +37,17 @@
     </head>
 
      
-     {%if template == 'cart'　or 'collection' %}
+     {%if template == 'cart'%}
 		
                    <body class="bkWhite postContainer">
+    {%elsif template == 'collection'%}
+		
+                   <body class="bkWhite postContainer">
+  
+    {%elsif template == 'product'%}
+		
+                   <body class="bkWhite postContainer">
+ 
   
      {% else %}
     <body class="postContainer">
