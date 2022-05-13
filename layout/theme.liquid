@@ -40,11 +40,11 @@
      {%if template == 'cart' or 'product' or 'collection' %}
 		
                    <body class="bkWhite postContainer">
-               
-
+     {% elsif template == 'index' %}
+	      <body>
   
      {% else %}
-    <body　class="">
+    <body　class="post Container">
     {% endif %}
     {% section 'header' %}
 
