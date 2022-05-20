@@ -2005,6 +2005,7 @@ th {
 .eventInfo {
   padding-bottom: 12.5vw;
   background-color: #6f7d6d;
+  padding-top: 50px;
 }
 
 .eventInfo__num {
@@ -5465,6 +5466,119 @@ height: 1000px;
 .subheader{
 	padding-bottom:30px;
 }
-  
+ 
+/* 追加法人コンテンツ */
+
+.sec05{
+  background: #6f7d6d;
+  margin: 0;
+  padding: 0px 70px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.sec05 .bkimg__contents {
+  background-image: url("{{ 'community.jpg' | asset_img_url: '3000x'}}");
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  height: 800px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+}
+
+.sec05 .min{
+  text-align: center;
+}
+.sec05 .btnwrap{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+
+}
+
+.sec05 .btnwrap .Btn{
+   margin: 0 10px;
+   border-color: #fff;
+   
+}
+
+.sec05 .btnwrap .Btn span{
+  color: #fff;
+}
+
+@media (max-width: 1920px) {
+  .sec05 .bkimg__contents {
+    background-size: 140%;
+  }
+}
+
+@media (max-width: 1350px) {
+  .sec05 .bkimg__contents {
+    background-size: 200%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .sec05 .bkimg__contents {
+    background-size: 240%;
+  }
+}
+
+@media (max-width: 500px) {
+  .sec05 .bkimg__contents {
+    background-attachment: scroll;
+  }
+}
+
+.sec05 .bkimg__contents__txtBox {
+  padding:70px 0;
+  color: #fff;
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  background: rgba(0, 0, 0, .04);
+
+}
+
+.sec05 .bkimg__contents__txtBox h2 {
+  font-size: 23px;
+  margin: 0 16px 0 0;
+  font-weight: bold;
+}
+
+@media (min-width: 1920px) {
+  .sec05 .Btn {
+    font-size: 22px;
+  }
+  .sec05 .bkimg__contents {
+    height: 40vw;
+  }
+}
+
+@media (max-width: 1025px) {
+  .sec05 .bkimg__contents {
+    height: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .sec05 .bkimg__contents {
+    height: 70vw;
+  }
+  .sec05 .bkimg__contents__txtBox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sec05 .bkimg__contents__txtBox h2 {
+    text-align: left;
+    font-size: 20px;
+  }
+}
+/* ここまで */
 
 /*# sourceMappingURL=main.css.map */
