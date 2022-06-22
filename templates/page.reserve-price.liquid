@@ -31,13 +31,44 @@
                     </li>
                 </ul>
             </nav>
+        <section class="reserves">
             <div id="reserve" class="sectionHeading">
                 <p class="eventInfo__num section__num">01.</p>
                 <h2 class="eventInfo__ttl">Reserve</h2>
                 <h3 class="eventInfo__subTtl reserve__subTtl">ご予約</h3>
             </div>
 
-{% comment %}cssで出し分ける {% endcomment %}
+            <div class="banners">
+
+                <div class="reserve__area banner">
+                    <a href="https://webpack2.jp/mypage/login/member/533302" class="reserve__banner-member">メンバーの方</a>
+                    <a href="https://webpack2.jp/reserve/calendar/visitor/533302" class="reserve__banner-visitor">ビジターの方</a>
+                </div>
+
+                
+                <div class="accordion__section">
+                            <h3 class="accordion__title">
+                                 My Page<span class="accordion__title--ja">ご予約状況の確認</span>
+                            </h3>
+                            <div class="accordion__box" style="display: none;">
+                                {% comment %} <p class="accordion__text">
+                                    Lodge 棟には 24m
+                                    24部屋のツインルームがあります。ミニマムな造りながら、天然素材を使用した質感とこだわりのリネンによる寝心地を重視した設計・仕様となっています。小高い丘に建つ、18番ホールを望む絶景のVillaはツインルームとキングサイズベットのお部屋があります。自慢の檜風呂は半露天式です。
+                                </p> {% endcomment %}
+                                <div class="mypage__area banner">
+                                    <a href="https://webpack2.jp/mypage/login/member/533302" class="mypage__banner-member">メンバーの方</a>
+                                    <a href="https://webpack2.jp/mypage/login/visitor/533302" class="mypage__banner-visitor">ビジターの方</a>
+                                </div>
+
+
+                            </div>
+                </div>
+
+            
+            </div>
+        </section>
+
+{% comment %}予約動線の追加
 
             <div class="iframe-plan">
                 <iframe
@@ -56,7 +87,9 @@
 
             </a>
 
-{% comment %} ここまで {% endcomment %}
+ ここまで {% endcomment %}
+
+ 
 
             <div id="price" class="sectionHeading">
                 <p class="eventInfo__num section__num">02.</p>
