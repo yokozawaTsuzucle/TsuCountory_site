@@ -5,7 +5,9 @@
 
   
   <main class="product Contents-wrap">
-    
+  {% comment %} バリエーションの実装 {% endcomment %}
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
 
   <section class="sec sec03">
     <div class="popular_product flex">
@@ -38,11 +40,7 @@
               <h2>{{ product.title }}</h2>
               <p class="price">{{ product.price | money }}(税込)
               </p>
-            </div>
-            <div class="product__detail__text">
-              {{ product.content }}
-            </div>
-  
+            </div>  
   
             <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
               <!--<label for="#">お渡し用袋</label>
@@ -50,14 +48,39 @@
                   <option value="不要">不要</option>
                   <option value="要">要</option>
                 </select> -->
+
+
                 <div class="counter">
                   <label for="number">数量</label>
+
                       <div class="line_item_count">
                           <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
                           <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*"max="{{ product.variants.first.inventory_quantity }}" >
                       </div>
 
                 </div>
+
+
+
+
+{% for product_option in product.options_with_values %}
+  <label>
+    {{ product_option.name }}
+    <select>
+      {% for value in product_option.values %}
+        <option {% if product_option.selected_value == value %}selected{% endif %}>
+          {{ value }}
+        </option>
+      {% endfor %}
+    </select>
+  </label>
+{% endfor %}                    
+                  </select> 
+
+
+
+                  
+
 
 
 
@@ -76,6 +99,11 @@
             
               
             </form>
+
+            <div class="product__detail__text">
+              {{ product.content }}
+            </div>
+
 
           
 
