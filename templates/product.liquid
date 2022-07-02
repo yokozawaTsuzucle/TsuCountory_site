@@ -1,5 +1,9 @@
   <script type="text/javascript">
   window.product = {{product | json}} || {};
+});
+
+
+
 </script>
 
 
@@ -84,7 +88,7 @@
 
 
 
-              <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
+              <input type="hidden" id="variant-id" name="id" value={{product.selected_or_first_available_variant.id}}>
 
               
               
