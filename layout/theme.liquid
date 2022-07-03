@@ -22,11 +22,11 @@
 
         {{ 'slick.css' | asset_url | stylesheet_tag }}
         {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+        
+        {{ 'main.css' | asset_url | stylesheet_tag }}
             {%if template == 'index' %}
             {{ 'opening-style.css' | asset_url | stylesheet_tag }}
             {%endif%}
-        
-        {{ 'main.css' | asset_url | stylesheet_tag }}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         
@@ -94,14 +94,16 @@
             referrerpolicy="no-referrer"
         ></script>
 
-            {%if template == 'index' %}
-                {{ 'opening-script.js' | asset_url | script_tag }}
-            {%endif%}
 
 
         
         
         {{ 'main.js' | asset_url | script_tag }}
+                    {%if template == 'index' %}
+                {{ 'opening-script.js' | asset_url | script_tag }}
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+            {%endif%}
+
         
     </body>
 </html>
