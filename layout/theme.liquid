@@ -50,9 +50,6 @@
     {%elsif template == 'product'%}
 		
                    <body class="bkWhite postContainer">
-    
-    {%elsif template == 'community'%}
-                   <body class="over-hidden">
  
   
      {% elsif template != 'index' %}
@@ -61,6 +58,9 @@
     <body>
     {% endif %}
     {% section 'header' %}
+
+
+    
 
 
 {{content_for_layout}}
