@@ -46,27 +46,26 @@
               </p>
             </div>  
   
-            <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
-              <!--<label for="#">お渡し用袋</label>
-                <select name="" id="">
-                  <option value="不要">不要</option>
-                  <option value="要">要</option>
-                </select> -->
 
 
+
+
+
+
+
+
+
+
+
+
+ {% comment %} <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
                 <div class="counter">
                   <label for="number">数量</label>
-
                       <div class="line_item_count">
                           <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
                           <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*"max="{{ product.variants.first.inventory_quantity }}" >
                       </div>
-
                 </div>
-
-
-
-
 {% for product_option in product.options_with_values %}
   <label>
     {{ product_option.name }}
@@ -79,30 +78,52 @@
     </select>
   </label>
 {% endfor %}                    
-                  </select> 
-
-
-
-                  
-
-
-
-
               <input type="hidden" id="variant-id" name="id" value={{product.selected_or_first_available_variant.id}}>
+              	<button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>              
+</form> {% endcomment %}
 
-              
-              
-              	<button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
-              
-              		
-              
-              
 
+
+
+
+
+
+
+{% comment %} オプションからバリエーションを作成したい {% endcomment %}
+
+          <form method="post" action="{{ routes.cart_add_url }}" {{ html_params }}>
+            {% if product.variants.size > 1 %}
+                {% for option in product.options %}
+            	<label for="SingleOptionSelector-{{forloop.index0}}"> {{ option }} </label>
+            	<select id="SingleOptionSelector-{{forloop.index0}}" class="single-option-selector single-option-selector-product-template product-form__input" data-index="option{{forloop.index}}" name="id">
+    				{% capture option_index %}option{{ forloop.index }}{% endcapture %} 
+    				{% assign option_values = product.variants | map: option_index | uniq %}
+                    {% for choice in option_values %}
+                 		<option value="{{ choice }}"> {{ choice }} </option>
+                  	{% endfor %}
+            	</select>
             
-              
+            	{% endfor %}
+            	<select id="ProductSelect-product-template" class="product-form__variants no-js" name="id" data-productid="{{product.id}}">
+                  	{% for option in product.variants %}
+                 		 <option value="{{option.id}}"> {{option.title}}</option>
+                  	{% endfor %}
+            	</select>
+            {% endif %}
             
-              
-            </form>
+  			 <div class="counter">
+                  <label for="number">数量</label>
+                      <div class="line_item_count">
+                          <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
+                          <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*"max="{{ product.variants.first.inventory_quantity }}" >
+                      </div>
+                </div>
+        <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>   
+		</form>
+
+{% comment %} ここまで {% endcomment %}
+
+
 
             <div class="product__detail__text">
               {{ product.content }}
