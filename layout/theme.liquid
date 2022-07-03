@@ -27,6 +27,13 @@
             {%if template == 'index' %}
             {{ 'opening-style.css' | asset_url | stylesheet_tag }}
             {%endif%}
+        
+            {%if template == 'page.community' %}
+                {{ 'locomotive-scroll.min.css' | asset_url | stylesheet_tag }}
+                {{ 'story.css' | asset_url | stylesheet_tag }}
+
+            {%endif%}
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         
@@ -78,7 +85,7 @@
 
     
 
-            <footer id="footer">
+        <footer id="footer">
             <a href="https://www.facebook.com/tsucountry/" class="sns"><i class="fa-brands fa-facebook-square"></i></a>
             <nav class="footerNav">
                 <ul class="menu">
