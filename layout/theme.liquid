@@ -50,6 +50,11 @@
     {%elsif template == 'product'%}
 		
                    <body class="bkWhite postContainer">
+    
+    {%elsif template == 'page.community'%}
+		
+                   <body class="over-hidden postContainer">
+    
  
   
      {% elsif template != 'index' %}
@@ -60,7 +65,7 @@
     {% section 'header' %}
 
 
-    
+
 
 
 {{content_for_layout}}
@@ -101,12 +106,18 @@
 
         
         
-        {{ 'main.js' | asset_url | script_tag }}
-                    {%if template == 'index' %}
+            {%if template == 'index' or 'page.community' %}
                 {{ 'opening-script.js' | asset_url | script_tag }}
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
             {%endif%}
 
+            {%if template == 'page.community' %}
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
+                {{ 'locomotive-scroll.min.js' | asset_url | script_tag }}
+                {{ 'story.js' | asset_url | script_tag }}
+
+            {%endif%}
         
+        {{ 'main.js' | asset_url | script_tag }}
     </body>
 </html>
