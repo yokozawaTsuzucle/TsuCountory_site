@@ -1,9 +1,5 @@
   <script type="text/javascript">
   window.product = {{product | json}} || {};
-});
-
-
-
 </script>
 
 
@@ -118,6 +114,7 @@
                           <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*"max="{{ product.variants.first.inventory_quantity }}" >
                       </div>
                 </div>
+                
         <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>   
 		</form>
 
@@ -159,6 +156,3 @@
 
 
 </main>
-
-
-

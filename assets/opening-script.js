@@ -29,7 +29,7 @@ function screenUnLock(){
 
 document.addEventListener("DOMContentLoaded",function(e){
 
-  screenLock();//オープニングアニメーション中はスクリーンロック
+  // screenLock();//オープニングアニメーション中はスクリーンロック
   
   const veil = document.querySelectorAll('.veil');
   const topLogo = document.getElementById('top-logo-wrapper');
@@ -50,5 +50,5 @@ document.addEventListener("DOMContentLoaded",function(e){
   .add(function(){openingPartition.classList.add('is-active-second')},'>')
   .add(function(){openingPartition.classList.remove('is-active-second')},'>+1.25')
   .add(function(){openingPartition.classList.add('is-scroll')},'>')
-  .add(function(){screenUnLock();},'>')//スクリーンロック解除
+  // .add(function(){screenUnLock();},'>')//スクリーンロック解除
 });
