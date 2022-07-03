@@ -62,7 +62,11 @@
      {% else %}
     <body>
     {% endif %}
-    {% section 'header' %}
+
+
+    {% if template != 'page.community' %}
+        {% section 'header' %}
+    {%endif%}
 
 
 
