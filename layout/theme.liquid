@@ -22,6 +22,9 @@
 
         {{ 'slick.css' | asset_url | stylesheet_tag }}
         {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+            {%if template == 'index' %}
+            {{ 'opening-style.css' | asset_url | stylesheet_tag }}
+            {%endif%}
         
         {{ 'main.css' | asset_url | stylesheet_tag }}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,6 +93,11 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+
+            {%if template == 'index' %}
+                {{ 'opening-script.js' | asset_url | script_tag }}
+            {%endif%}
+
 
         
         
