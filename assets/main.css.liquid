@@ -5586,10 +5586,13 @@ height: 1000px;
 /* 予約バナー周辺の変更 */
 .reserves{
   margin-bottom: 100px;
+  
 }
 
+
+
 /* 追記0622予約動線の追加 */
-.banners{
+.banners, .newMember{
   width: 88.4375vw;
   margin: 0 auto;
 }
@@ -5597,24 +5600,58 @@ height: 1000px;
 .banners .banner{
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .banners .banner a{
-  width: 50%;
-  text-align: center;
-  color: #000;
-  background: grey;
-  font-size: 30px;
-  border: 2px solid #000;
-  line-height: 400px;
+  width: 48%;
+  transition: .3s;
 }
 
 .banners .banner a:hover{
-  opacity: .4;
+  opacity: .8;
+}
+
+.banners .banner a img{
+  display: block;
+  width: 100%;
 }
 
 .banners .accordion__box{
   padding: 0;
+}
+
+/* 追記220703予約バナー周りの反映 */
+/* .newMember{
+  width: 100%;
+  display: block;
+} */
+
+.newMember a{
+  display: block;
+  width: 100%;
+  transition: .3s;
+}
+
+.newMember a:hover{
+  opacity: .8;
+}
+
+.newMember a img{
+  display: block;
+  width: 100%;
+}
+
+
+@media(min-width: 1440px){
+  .reserves{
+    max-width: 65.2777777778vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .banners, .newMember{
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
