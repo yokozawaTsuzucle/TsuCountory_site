@@ -1185,14 +1185,19 @@ body {
 
 /* 20220513 横澤記載　背景、カラーの変更 */
 .bkWhite{
-	background-color: #fff;
+	background-color: #EDECE7;
   color: #000;
 }
 
 .bkWhite header{
 	background: #6f7d6d;
    color: #fff;
-  padding-bottom: 30px;
+}
+
+@media(max-width: 850px){
+  .bkWhite header{
+    padding-bottom: 75px;
+  }
 }
 
 
@@ -5406,7 +5411,8 @@ textarea {
 @media (max-width: 550px){
 
   .slider-2{
-    height: auto !important;
+    /* height: auto !important; */
+    height: 100vw;
   }
 }
 
@@ -5658,4 +5664,21 @@ height: 1000px;
   }
 }
 
+.slick-prev:before{
+  content: none;
+}
+.slick-next:before{
+  content: none;
+}
+
 /*# sourceMappingURL=main.css.map */
+
+#ProductSelect-product-template{
+  padding: 5px;
+  margin-left: 10px;
+  text-align: center;
+  background-color: #fff;
+  color: #6f7d6d;
+  border: 1px solid #6f7d6d;
+  border-radius: 5px;
+}

@@ -89,7 +89,7 @@
 
           <form method="post" action="{{ routes.cart_add_url }}" {{ html_params }}>
             {% if product.variants.size > 1 %}
-                {% for option in product.options %}
+                {% comment %} {% for option in product.options %}
             	<label for="SingleOptionSelector-{{forloop.index0}}"> {{ option }} </label>
             	<select id="SingleOptionSelector-{{forloop.index0}}" class="single-option-selector single-option-selector-product-template product-form__input" data-index="option{{forloop.index}}" name="id">
     				{% capture option_index %}option{{ forloop.index }}{% endcapture %} 
@@ -99,7 +99,7 @@
                   	{% endfor %}
             	</select>
             
-            	{% endfor %}
+            	{% endfor %} {% endcomment %}
             	<select id="ProductSelect-product-template" class="product-form__variants no-js" name="id" data-productid="{{product.id}}">
                   	{% for option in product.variants %}
                  		 <option value="{{option.id}}"> {{option.title}}</option>
