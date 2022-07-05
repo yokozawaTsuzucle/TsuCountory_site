@@ -95,7 +95,43 @@
 
 {% comment %} オプションからバリエーションを作成したい {% endcomment %}
 
-          <form method="post" action="{{ routes.cart_add_url }}" {{ html_params }}>
+        
+
+          
+        {% if product.has_only_default_variant %}
+
+           <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
+              <!--<label for="#">お渡し用袋</label>
+                <select name="" id="">
+                  <option value="不要">不要</option>
+                  <option value="要">要</option>
+                </select> -->
+                <div class="counter">
+                  <label for="number">数量</label>
+                      <div class="line_item_count">
+                          <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
+                          <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*">
+                      </div>
+
+                </div>
+
+
+
+              <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
+
+              
+              
+              	<button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
+              	
+
+              
+              
+              
+              
+            </form>
+          {%else%}
+
+            <form method="post" action="{{ routes.cart_add_url }}" {{ html_params }}>
             {% if product.variants.size > 1 %}
                 {% comment %} {% for option in product.options %}
             	<label for="SingleOptionSelector-{{forloop.index0}}"> {{ option }} </label>
@@ -115,16 +151,22 @@
             	</select>
             {% endif %}
             
-  			 <div class="counter">
-                  <label for="number">数量</label>
-                      <div class="line_item_count">
-                          <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
-                          <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*"max="{{ product.variants.first.inventory_quantity }}" >
-                      </div>
-                </div>
-                
-        <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>   
-		</form>
+            <div class="counter">
+                      <label for="number">数量</label>
+                          <div class="line_item_count">
+                              <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
+                              <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*"max="{{ product.variants.first.inventory_quantity }}" >
+                          </div>
+            </div>
+                    
+            <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
+
+		      </form>
+
+          {%endif%}
+
+
+
 
 {% comment %} ここまで {% endcomment %}
 
