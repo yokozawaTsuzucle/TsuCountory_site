@@ -798,6 +798,7 @@ a{
     width: calc(100% - 40px);
     margin: 0 auto;
     text-align: left;
+    margin-bottom: 30px;
   }
   .top-message br{
     display: none;
