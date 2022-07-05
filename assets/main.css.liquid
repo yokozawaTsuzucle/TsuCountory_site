@@ -3912,10 +3912,13 @@ th{
   padding-left: 40px;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: center;
+  /* justify-content: center; */
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   display: flex;
+  margin-left: 30px;/* ５つ目の商品が真ん中に寄ってしまう問題を防ぐため */
+
+  
 }
 
 .sec .collection-wrap .product_card {
@@ -3989,6 +3992,7 @@ th{
   }
   .sec .collection-wrap{
     justify-content: flex-start !important;
+    margin-left: 0;
   }
 }
 
