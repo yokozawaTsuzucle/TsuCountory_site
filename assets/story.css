@@ -914,3 +914,10 @@ a{
     display: block;
   }
 }
+
+
+@media(max-width: 1050px){
+  .community__home{
+    margin-bottom: 25px;
+  }
+}
